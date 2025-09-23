@@ -1,6 +1,17 @@
-const button = document.querySelector('button');
+const button = document.querySelector('#clicker');
 const displayedScore = document.querySelector('#score');
-button.onclick = () => {
-    const currentScore = Number(displayedScore.textContent);
-    displayedScore.textContent = currentScore + 1;
+
+let score = 0
+const incrementor = 1;
+
+const upgradeOne = {
+    cost: 10,
+    
 }
+
+button.onclick = () => {
+    score++;
+    displayedScore.textContent = score;
+}
+
+
