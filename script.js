@@ -1,8 +1,13 @@
+window.onload = () => {
+    updatePage();
+}
+
 const clicker = document.querySelector('#clicker');
 const displayedScore = document.querySelector('#score');
 
 // Increment upgrade
-const incrementUpgrade = document.querySelector('#upgrade-1');
+const incrementUpgradeBtn = document.querySelector('#upg-1-btn');
+const incrementUpgradeSpan = document.querySelector('#upg-1-cost');
 let incrementCost = 10;
 
 
@@ -16,7 +21,7 @@ clicker.onclick = () => {
 }
 
 // Increment Upgrade functionality
-incrementUpgrade.onclick = () => {
+incrementUpgradeBtn.onclick = () => {
     if (score < incrementCost) {
         alert('You do not have enough points to purchase this upgrade');
         return;
@@ -25,9 +30,10 @@ incrementUpgrade.onclick = () => {
     score -= incrementCost;
     incrementCost *= 2;
     alert("Purchase successful :D");
-    updateScore();
+    updatePage();
 }
 
-const updateScore = () => {
+const updatePage = () => {
     displayedScore.textContent = score;
+    incrementUpgradeSpan.textContent = incrementCost;
 }

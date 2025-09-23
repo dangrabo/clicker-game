@@ -16,14 +16,6 @@
 
 
 
-
-
-
-
-
-
-
-
 .centered
 {
     margin: 0;
@@ -37,4 +29,9 @@
 #score
 {
     text-align: center;
+}
+
+
+.upg-div {
+    display: flex;
 }
