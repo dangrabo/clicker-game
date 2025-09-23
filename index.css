@@ -13,3 +13,7 @@
     height: 200px;
     position: relative;
 }
+
+.upg-div {
+    display: flex;
+}
