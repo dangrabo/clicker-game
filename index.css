@@ -1,29 +1,24 @@
 .vert
 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.boxed
-{
-    height: 200px;
-    position: relative;
-}
+
 
 .centered
 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+   
 }
 
 #score
 {
-    margin-bottom: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 
