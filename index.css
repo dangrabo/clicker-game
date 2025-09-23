@@ -8,23 +8,20 @@
     transform: translate(-50%, -50%);
 }
 
-.boxed
-{
-    height: 500px;
-    position: relative;
-}
+
 
 .centered
 {
     display: flex;
     justify-content: center;
-    width: 150px;
+    flex-direction: column;
+   
 }
 
 #score
 {
-    margin-bottom: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 
