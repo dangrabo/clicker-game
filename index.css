@@ -1,28 +1,90 @@
-.vert
+/* Alphabetized */
+/* A */
+/* B */
+
+button 
+{
+    border-radius: 8px;
+}
+
+/* C */
+
+.Container
 {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
-
 
 .centered
 {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-   
+    flex-direction: row;
 }
+
+#clicker
+{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+/* D */
+/* E */
+/* F */
+/* G */
+/* H */
+/* I */
+/* J */
+/* K */
+/* L */
+/* M */
+/* N */
+/* O */
+/* P */
+
+p
+{
+    font-size: 2rem;
+}
+
+/* Q */
+/* R */
+/* S */
 
 #score
 {
     display: flex;
     justify-content: center;
+    font-size: 4rem;
+
 }
 
+/* T */
+/* U */
 
 .upg-div {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    margin-top: 2rem;
 }
+
+.upg-btn
+{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.upg-cost
+{
+    font-size: 2rem;
+}
+
+/* V */
+/* W */
+/* X */
+/* Y */
+/* Z */

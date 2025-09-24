@@ -36,6 +36,7 @@ incrementUpgradeBtn.onclick = () => {
     incrementor++;
     score -= incrementCost;
     incrementCost *= 2;
+    clicker.textContent =  `+${incrementor}`;
     alert("Purchase successful :D");
     updatePage();
 }
