@@ -13,13 +13,12 @@ let incrementCost = 10;
 // Time upgrade
 const timeUpgradeBtn = document.querySelector('#upg-2-btn');
 const timeUpgradeCost = document.querySelector('#upg-2-cost');
-const timeUpgradeReward = document.querySelector('#time-plus');
 let timeCost = 10;
-let timeIncrementor = 10;
 
 // General player variablese
-let score = 0
+let score = 0;
 let incrementor = 1;
+let timeIncrementor = 10;
 
 // Main clicker functionality
 clicker.onclick = () => {
@@ -40,7 +39,19 @@ incrementUpgradeBtn.onclick = () => {
     updatePage();
 }
 
-// Time upgrade funcitonality (upg-2)
+// Time upgrade btn fucntionality
+timeUpgradeBtn.onclick = () => {
+    if (score < timeCost) {
+        alert('You do not have enough points to purchase this upgrade');
+        return;
+    }
+    timeIncrementor += 10;
+    score -= timeCost;
+    timeCost *= 2;
+    updatePage();
+}
+
+// Timed reward funcitonality (upg-2)
 const giveTimedReward = () => {
     score += timeIncrementor;
     updatePage();
@@ -48,17 +59,9 @@ const giveTimedReward = () => {
 
 setInterval(giveTimedReward, 10000);
 
-// Time upgrade btn fucntionality
-timeUpgradeBtn.onclick = () => {
-    if (score < timeCost) {
-        alert('You do not have enough points to purchase this upgrade');
-        return;
-    }
-}
-
 const updatePage = () => {
     displayedScore.textContent = score;
     incrementUpgradeCost.textContent = incrementCost;
     timeUpgradeCost.textContent = timeCost;
-    timeUpgradeReward.innerHTML = timeIncrementor
+    timeUpgradeReward.innerHTML = nextTimeIncrementor;
 }
