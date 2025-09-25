@@ -1,10 +1,15 @@
 /* Alphabetized */
 /* A */
 /* B */
+body {
+    background-color: gray;
+}
 
 button 
 {
     border-radius: 8px;
+    border-color: gold;
+    background-color: rgb(172, 172, 172);
 }
 
 /* C */
@@ -50,6 +55,15 @@ p
 
 /* Q */
 /* R */
+#rewards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid gold;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto;
+}
 /* S */
 
 #score
@@ -65,7 +79,6 @@ p
 
 .upg-div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;

@@ -2,8 +2,10 @@ window.onload = () => {
     updatePage();
 }
 
+// Basic UI components
 const clicker = document.querySelector('#clicker');
 const displayedScore = document.querySelector('#score');
+const rewardsDiv = document.querySelector('#rewards');
 
 // Increment upgrade
 const incrementUpgradeBtn = document.querySelector('#upg-1-btn');
@@ -23,7 +25,7 @@ let timeIncrementor = 10;
 // Main clicker functionality
 clicker.onclick = () => {
     score += incrementor;
-    displayedScore.textContent = score;
+    updatePage();
 }
 
 // Increment Upgrade functionality (upg-1)
@@ -36,7 +38,6 @@ incrementUpgradeBtn.onclick = () => {
     score -= incrementCost;
     incrementCost *= 2;
     clicker.textContent =  `+${incrementor}`;
-    alert("Purchase successful :D");
     updatePage();
 }
 
@@ -60,9 +61,38 @@ const giveTimedReward = () => {
 
 setInterval(giveTimedReward, 10000);
 
+
+// Reward tracker object
+const rewardsGiven = {
+    one: false,
+    two: false,
+    three: false
+}
+
+const giveRewards = () => {
+    if (score >= 1 && !rewardsGiven.one) {
+        const rewardOne = document.createElement('p');
+        rewardOne.innerHTML = '100 🥉'
+        rewardsDiv.appendChild(rewardOne);
+        rewardsGiven.one = true;
+    } else if (score >= 5 && !rewardsGiven.two) {
+        const rewardTwo = document.createElement('p');
+        rewardTwo.innerHTML = '500 🥈'
+        rewardsDiv.appendChild(rewardTwo);
+        rewardsGiven.two = true;
+    } else if (score >= 10 && !rewardsGiven.three) {
+        const rewardThree = document.createElement('p');
+        rewardThree.innerHTML = '1000 🥇';
+        rewardsDiv.appendChild(rewardThree);
+        rewardsGiven.three = true;
+        alert('You have become the MASTER clicker. You have proven yourself worthy of the thunder click ⚡');
+        incrementor = 1000;
+    }
+}
+
 const updatePage = () => {
+    giveRewards();
     displayedScore.textContent = score;
     incrementUpgradeCost.textContent = incrementCost;
     timeUpgradeCost.textContent = timeCost;
-    timeUpgradeReward.innerHTML = nextTimeIncrementor;
 }
