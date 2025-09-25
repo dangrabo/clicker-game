@@ -87,6 +87,7 @@ const giveRewards = () => {
         rewardsGiven.three = true;
         alert('You have become the MASTER clicker. You have proven yourself worthy of the thunder click ⚡');
         incrementor = 1000;
+        clicker.textContent =  `+${incrementor}`;
     }
 }
 
