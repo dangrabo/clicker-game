@@ -70,17 +70,17 @@ const rewardsGiven = {
 }
 
 const giveRewards = () => {
-    if (score >= 1 && !rewardsGiven.one) {
+    if (score >= 100 && !rewardsGiven.one) {
         const rewardOne = document.createElement('p');
         rewardOne.innerHTML = '100 🥉'
         rewardsDiv.appendChild(rewardOne);
         rewardsGiven.one = true;
-    } else if (score >= 5 && !rewardsGiven.two) {
+    } else if (score >= 500 && !rewardsGiven.two) {
         const rewardTwo = document.createElement('p');
         rewardTwo.innerHTML = '500 🥈'
         rewardsDiv.appendChild(rewardTwo);
         rewardsGiven.two = true;
-    } else if (score >= 10 && !rewardsGiven.three) {
+    } else if (score >= 1000 && !rewardsGiven.three) {
         const rewardThree = document.createElement('p');
         rewardThree.innerHTML = '1000 🥇';
         rewardsDiv.appendChild(rewardThree);
